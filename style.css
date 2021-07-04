@@ -360,6 +360,11 @@ li a {
     width: 32px;
 }
 
+/*Used to lock scrolling of body when mobile navbar is active*/
+.scroll-lock {
+    overflow: hidden;
+}
+
 /*Mobile styling*/
 @media screen and (max-width: 768px) {
     .navbar {
