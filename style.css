@@ -91,7 +91,7 @@ li a {
     position: fixed;
     width: 0px;
     height: 100%;
-    background: var(--light-grey);
+    background-color: rgba(70,70,70,0.8);
     transition: 0.5s;
     overflow: hidden;
     z-index: 3;
@@ -101,7 +101,7 @@ li a {
 }
 
 .mobile-navbar.active {
-    width: 250px;
+    width: 40%;
 }
 
 .mobile-navbar ul {
@@ -114,12 +114,12 @@ li a {
 
 .mobile-navbar ul li {
     position: relative;
-    width: 100%;
     list-style: none;
+    width: 25vh;
 }
 
 .mobile-navbar ul li:hover {
-    background-color: var(--dark-blue);
+    background-color: #33398f65;
 }
 
 .mobile-navbar ul li a {
