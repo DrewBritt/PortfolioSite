@@ -262,10 +262,33 @@ li a {
     bottom: 0;
     background-color: var(--light-grey);
     overflow: hidden;
+    transition: .5s;
+    animation: container-slide-down .5s;
 }
 
 .text-container:hover {
     height: 260px;
+    animation: container-slide-up .5s;
+}
+
+@keyframes container-slide-up {
+    from {
+        height: 75px;
+    }
+    
+    to {
+        height: 260px;
+    }
+}
+
+@keyframes container-slide-down {
+    from {
+        height: 260px;
+    }
+    
+    to {
+        height: 75px;
+    }
 }
 
 .project-content {
