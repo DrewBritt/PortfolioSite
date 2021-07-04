@@ -267,7 +267,7 @@ li a {
 }
 
 .text-container:hover {
-    height: 260px;
+    height: 70%;
     animation: container-slide-up .5s;
 }
 
@@ -277,13 +277,13 @@ li a {
     }
     
     to {
-        height: 260px;
+        height: 70%;
     }
 }
 
 @keyframes container-slide-down {
     from {
-        height: 260px;
+        height: 70%;
     }
     
     to {
