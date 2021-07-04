@@ -72,24 +72,22 @@ li a {
 .navbar-sections ul {
     justify-content: space-between;
     padding: 0 5%;
-    height: 10vh;
     width: 30%;
 }
 
 .navbar-left {
     float: left;
-    padding-left: 2%;
+    padding: 0 5%;
+    height: 10vh;
 }
 
 .navbar-left a {
-    display: inline-block;
-    height: auto;
-    vertical-align: middle;
-    padding-top: 20%;
+    display: block;
 }
 
 .navbar-right {
     float: right;
+    height: 10vh;
 }
 
 /*Hero shit*/
@@ -140,8 +138,8 @@ li a {
     justify-content: center;
     flex-direction: column;
     align-items: left;
-    top: 35%;
-    left: 10%;
+    top: 40%;
+    left: 5%;
     font-size: 25px;
     color: #fff;
     text-transform: uppercase;
