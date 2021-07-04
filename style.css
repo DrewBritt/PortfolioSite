@@ -12,7 +12,8 @@
     --dark-blue: #33398f;
     --light-blue: #60c8d6;
     --burnt-green: #70ae6e;
-    --light-purple: #a09ebb;
+    --light-purple: #9677df;
+    --light-grey: #cecece;
 }
 
 /*General HTML styling*/
@@ -161,7 +162,8 @@ li a {
 }
 
 #synapse {
-    background-image: url(images/shitfartpee.png)
+    background-image: url(images/synapsedemo.PNG);
+    background-position: center; 
 }
 
 #flexcave {
@@ -177,6 +179,7 @@ li a {
     text-align: center;
     color: var(--dark-blue);
     font-size: 2rem;
+    text-shadow: 0px 1px grey;
 }
 
 .text-container {
@@ -186,7 +189,7 @@ li a {
     z-index: 2;
     left: 0;
     bottom: 0;
-    background-color: white;
+    background-color: var(--light-grey);
     overflow: hidden;
 }
 
@@ -197,10 +200,12 @@ li a {
 .project-content {
     padding: 25px 0;
     color: var(--light-purple);
+    
 }
 
 .project-content p {
     text-align: center;
+    text-shadow: 0px 1px grey;
 }
 
 .source-text span{
