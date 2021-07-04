@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap');
+
+/*Stretch all elements to edge of screen*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light-blue: #88f1ff;
+    --dark-blue: #40476d;
+    --burnt-green: #70ae6e;
+    --light-purple: #a09ebb;
+}
+
+/*General HTML styling*/
+
+html {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    background-color: rgba(70, 70, 70, 0.25);
+    padding: 0 5%;
+    height: 10vh;
+}
+
+li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+#name {
+    color: var(--light-blue);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*Navbar shit*/
+
+#navbar-mobile {
+    /*Hide mobile navbar on desktop view*/
+    display: none;
+}
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
