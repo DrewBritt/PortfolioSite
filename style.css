@@ -38,6 +38,7 @@ li a {
     color: #fff;
     text-decoration: none;
     font-size: 1.5rem;
+    padding: 5px;
 }
 
 #name {
@@ -56,11 +57,6 @@ li a {
 }
 
 /*Navbar shit*/
-
-#navbar-mobile {
-    /*Hide mobile navbar on desktop view*/
-    display: none;
-}
 
 .navbar {
     position: absolute;
@@ -88,6 +84,63 @@ li a {
 .navbar-right {
     float: right;
     height: 10vh;
+}
+
+/*Mobile navbar shit*/
+.mobile-navbar {
+    position: fixed;
+    width: 0px;
+    height: 100%;
+    background: var(--light-grey);
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.mobile-navbar.active {
+    width: 250px;
+}
+
+.mobile-navbar ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+}
+
+.mobile-navbar ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+.mobile-navbar ul li:hover {
+    background-color: var(--dark-blue);
+}
+
+.mobile-navbar ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+
+.toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    cursor: pointer; 
+    z-index: 2;
+}
+
+.toggle img {
+    height: 100%;
+    width: 100%;
 }
 
 /*Hero shit*/
@@ -282,6 +335,10 @@ li a {
 
 /*Mobile styling*/
 @media screen and (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+
     .about-text {
         margin-left: 10%;
         margin-right: 10%;
@@ -290,5 +347,15 @@ li a {
     .icons-list {
         padding-left: 25%;
         padding-right: 25%;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .mobile-navbar {
+        display: none;
+    }
+
+    .toggle {
+        display: none;
     }
 }
