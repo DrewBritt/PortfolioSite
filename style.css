@@ -65,13 +65,30 @@ li a {
     position: absolute;
     width: 100%;
     z-index: 2;
+    background-color: rgba(70,70,70,0.4);
 }
 
 .navbar-sections ul {
     justify-content: space-between;
-    background-color: rgba(70,70,70,0.25);
     padding: 0 5%;
     height: 10vh;
+    width: 30%;
+}
+
+.navbar-left {
+    float: left;
+    padding-left: 2%;
+}
+
+.navbar-left a {
+    display: inline-block;
+    height: auto;
+    vertical-align: middle;
+    padding-top: 20%;
+}
+
+.navbar-right {
+    float: right;
 }
 
 /*Hero shit*/
