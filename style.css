@@ -145,18 +145,6 @@ li a {
 
 /*Hero styling*/
 
-@keyframes blur {
-    0% {
-        -webkit-filter: blur(10px);
-        transform: scale(1.1);
-    }
-
-    100% {
-        -webkit-filter: blur(0px);
-        transform: scale(1);
-    }
-}
-
 .hero-container {
     position: relative;
     width: 100%;
@@ -164,7 +152,7 @@ li a {
     overflow: hidden;
 }
 
-.image-container {
+.hero-image-container {
     position: relative;
     background-image: url(images/me.JPG);
     background-size: cover;
@@ -173,6 +161,22 @@ li a {
     height: 100%;
     margin-top: 0vh;
     animation: blur 5s;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+@keyframes blur {
+    0% {
+        filter: blur(10px);
+        -webkit-filter: blur(10px);
+        transform: scale(1.1);
+    }
+
+    100% {
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+        transform: scale(1);
+    }
 }
 
 .hero-overlay {
