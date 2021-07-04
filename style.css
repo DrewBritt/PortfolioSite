@@ -43,7 +43,6 @@ li a {
 
 #name {
     color: var(--light-blue);
-    font-size: 30px;
     font-weight: bold;
 }
 
@@ -68,7 +67,7 @@ li a {
 .navbar-sections ul {
     justify-content: space-between;
     padding: 0 5%;
-    width: 30%;
+    width: 50%;
 }
 
 .navbar-left {
@@ -86,12 +85,40 @@ li a {
     height: 10vh;
 }
 
+.navbar-sections ul li a {
+    transition: all .5s ease;
+}
+
+.navbar-sections ul li a:hover{
+    font-size: 3rem;
+}
+
+@keyframes scaleNavbarTextUp {
+    from {
+        font-size: 1.5rem;
+    }
+
+    to {
+        font-size: 3rem;
+    }
+}
+
+@keyframes scaleNavbarTextDown {
+    from {
+        font-size: 3rem;
+    }
+
+    to {
+        font-size: 1.5rem;
+    }
+}
+
 /*Mobile navbar styling*/
 .mobile-navbar {
     position: fixed;
     width: 0px;
     height: 100%;
-    background-color: rgba(70,70,70,0.8);
+    background-color: rgba(70,70,70,0.95);
     transition: 0.5s;
     overflow: hidden;
     z-index: 3;
@@ -116,6 +143,7 @@ li a {
     position: relative;
     list-style: none;
     width: 25vh;
+    
 }
 
 .mobile-navbar ul li:hover {
@@ -126,9 +154,9 @@ li a {
     position: relative;
     display: block;
     width: 100%;
-    display: flex;
     text-decoration: none;
     color: white;
+    font-weight: bold;
 }
 
 .toggle {
