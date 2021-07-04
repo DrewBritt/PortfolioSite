@@ -167,11 +167,13 @@ li a {
 }
 
 #flexcave {
-    background-image: url(images/shitfartpee.png)
+    background-image: url(images/flexcavedemo.PNG);
+    background-position: center top;
 }
 
 #buttingheads {
-    background-image: url(images/shitfartpee.png)
+    background-image: url(images/buttingheadsdemo.PNG);
+    background-position: left center;
 }
 
 .project-name {
