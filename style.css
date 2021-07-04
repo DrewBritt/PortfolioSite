@@ -205,6 +205,19 @@ li a {
     color: black;
     font-weight: bold;
 }
+
+/*About shit*/
+.about-text {
+    text-align: center;
+    padding: 25px 0;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.about-text p {
+    font-size: 25px;
+}
+
 /*Misc shit*/
 .social-icon {
     width: 25%;
