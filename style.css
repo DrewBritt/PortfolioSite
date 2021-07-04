@@ -95,6 +95,9 @@ li a {
     transition: 0.5s;
     overflow: hidden;
     z-index: 3;
+
+    /*Hide on desktop by default (set to display: block in mobile section)*/
+    display: none;
 }
 
 .mobile-navbar.active {
@@ -136,6 +139,9 @@ li a {
     height: 60px;
     cursor: pointer; 
     z-index: 2;
+
+    /*Hide on desktop by default (set to display: block in mobile section)*/
+    display: none;
 }
 
 .toggle img {
@@ -367,27 +373,36 @@ li a {
 
 /*Mobile styling*/
 @media screen and (max-width: 768px) {
+    /*Hide desktop navbar on mobile screens*/
     .navbar {
         display: none;
     }
 
+    /*Renders mobile navbar on mobile screens*/
+    .mobile-navbar {
+        display: block;
+    }
+
+    /*Display hamburger icon on mobile*/
+    .toggle {
+        display: block;
+    }
+
+    /*Adjust location of hero text to look nicer against background*/
+    .hero-text {
+        top: 15%;
+        left: 5%;
+    }
+
+    /*Adjusting the margin of the about text makes it scale better on smaller devices*/
     .about-text {
         margin-left: 10%;
         margin-right: 10%;
     }
 
+    /*Same as above but with icons*/
     .icons-list {
         padding-left: 25%;
         padding-right: 25%;
-    }
-}
-
-@media screen and (min-width: 769px) {
-    .mobile-navbar {
-        display: none;
-    }
-
-    .toggle {
-        display: none;
     }
 }
