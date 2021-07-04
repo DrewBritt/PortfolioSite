@@ -444,4 +444,8 @@ li a {
     .project-content {
         color: white;
     }
+
+    .contact-container {
+        background-color: var(--mid-grey);
+    }
 }
