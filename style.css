@@ -9,7 +9,9 @@
 }
 
 :root {
-    --dark-blue: #33398f;
+    --dark-blue: #1d2b38;
+    --soft-blue: #3b3e68;
+    --mid-blue: #33398f;
     --light-blue: #60c8d6;
     --burnt-green: #70ae6e;
     --light-purple: #9677df;
@@ -23,6 +25,8 @@
 html {
     font-family: 'Source Sans Pro', sans-serif;
     scroll-behavior: smooth;
+    background-color: var(--dark-blue);
+    color: #fff;
 }
 
 a {
@@ -240,7 +244,7 @@ li a {
 }
 
 .skill-text {
-    color: var(--dark-blue);
+    color: var(--mid-blue);
     text-shadow: 0px 1px black;
 }
 
@@ -288,7 +292,6 @@ li a {
 .project-name {
     margin-top: 15px;
     text-align: center;
-    color: var(--dark-blue);
     font-size: 2rem;
     text-shadow: 0px 1px grey;
 }
@@ -300,7 +303,7 @@ li a {
     z-index: 2;
     left: 0;
     bottom: 0;
-    background-color: var(--light-grey);
+    background-color: var(--soft-blue);
     overflow: hidden;
     transition: .5s;
     animation: container-slide-down .5s;
@@ -333,13 +336,12 @@ li a {
 
 .project-content {
     padding: 20px 0;
-    color: var(--light-purple);
     
 }
 
 .project-content p {
     text-align: center;
-    text-shadow: 0px 1px grey;
+    text-shadow: 0px 1px black;
 }
 
 /*About styling*/
@@ -358,17 +360,16 @@ li a {
     width: 50%;
     height: 50%;
     border-radius: 5%;
-    margin-left: 40%;
 }
 
 .about-text {
-    width: 60%;
-    text-align: left;
     padding: 25px 0;
+    width: 90%;
+    text-align: center;
 }
 
 .about-text p {
-    font-size: 35px;
+    font-size: 25px;
 }
 
 /*Contact styling*/
@@ -460,6 +461,7 @@ li a {
 }
 
 /*Dark mode styling*/
+/*
 @media (prefers-color-scheme: dark) {
     body {
         background-color: var(--dark-grey);
@@ -477,4 +479,4 @@ li a {
     .contact-container {
         background-color: var(--mid-grey);
     }
-}
+} */
