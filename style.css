@@ -346,14 +346,18 @@ li a {
 /*About styling*/
 .about-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+.about-card {
+    width: 50%;
+    background-color: var(--soft-blue);
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: row wrap;
-    margin-left: 25%;
-    width: 50%;
-
-    background-color: var(--soft-blue);
-    margin-bottom: 2%;
     border-radius: 2%;
 }
 
@@ -443,6 +447,11 @@ li a {
         left: 5%;
     }
 
+    /*Adjusting the about card to be wider on mobile devices makes the page more compact and nicer to view*/
+    .about-card {
+        width: 80%;
+    }
+
     /*Adjusting the margin of the about text makes it scale better on smaller devices*/
     .about-text {
         margin-left: 5%;
@@ -451,13 +460,13 @@ li a {
     }
 
     .about-text p {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     /*Scale up image to appear larger on mobile, and remove image margin used on larger screens.*/
     .about-image img {
-        height: 100%;
-        width: 100%;
+        height: 90%;
+        width: 90%;
         margin-left: 0;
     }
 
