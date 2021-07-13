@@ -290,15 +290,15 @@ li a {
 }
 
 .project-name {
-    margin-top: 15px;
+    margin-top: 10px;
     text-align: center;
     font-size: 2rem;
-    text-shadow: 0px 1px grey;
+    text-shadow: 0px 1px black;
 }
 
 .text-container {
     position: absolute;
-    height: 75px;
+    height: 60px;
     width: 100%;
     z-index: 2;
     left: 0;
@@ -310,33 +310,32 @@ li a {
 }
 
 .text-container:hover {
-    height: 70%;
+    height: 55%;
     animation: container-slide-up .5s;
 }
 
 @keyframes container-slide-up {
     from {
-        height: 75px;
+        height: 60px;
     }
     
     to {
-        height: 70%;
+        height: 55%;
     }
 }
 
 @keyframes container-slide-down {
     from {
-        height: 70%;
+        height: 55%;
     }
     
     to {
-        height: 75px;
+        height: 60px;
     }
 }
 
 .project-content {
-    padding: 20px 0;
-    
+    padding: 10px 0;
 }
 
 .project-content p {
@@ -466,6 +465,31 @@ li a {
     .icons-list {
         padding-left: 25%;
         padding-right: 25%;
+    }
+
+    /*Update scaling of project content container when selected. Makes containers look less spacious.*/
+    .text-container:hover {
+        height: 65%;
+    }
+    
+    @keyframes container-slide-up {
+        from {
+            height: 60px;
+        }
+        
+        to {
+            height: 65%;
+        }
+    }
+    
+    @keyframes container-slide-down {
+        from {
+            height: 65%;
+        }
+        
+        to {
+            height: 60px;
+        }
     }
 }
 
