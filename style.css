@@ -117,6 +117,30 @@ li a {
     align-items: center;
 }
 
+@keyframes hero-header-fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes hero-text-fade {
+    from {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .hero-header-text {
     text-align: center;
     font-size: 50px;
@@ -124,6 +148,7 @@ li a {
     text-transform: uppercase;
     text-shadow: 0px 1px black;
     z-index: 2;
+    animation: hero-header-fade 3s;
 }
 
 .hero-text {
@@ -132,6 +157,7 @@ li a {
     color: #fff;
     text-transform: uppercase;
     z-index: 2;
+    animation: hero-text-fade 3s;
 }
 
 .skill-text {
