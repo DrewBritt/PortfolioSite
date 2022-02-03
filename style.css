@@ -122,6 +122,7 @@ li a {
     font-size: 50px;
     color: #fff;
     text-transform: uppercase;
+    text-shadow: 0px 1px black;
     z-index: 2;
 }
 
@@ -316,19 +317,17 @@ li a {
 
 /*Mobile styling*/
 @media screen and (max-width: 768px) {
-    /*Hide desktop navbar on mobile screens*/
-    .navbar {
-        display: none;
+    /*Adjust hero text sizes to appear better on smaller screens*/
+    .hero-text-container {
+        height: 70%;
     }
 
-    /*Renders mobile navbar on mobile screens*/
-    .mobile-navbar {
-        display: block;
+    .hero-header-text {
+        font-size: 35px;
     }
 
-    /*Display hamburger icon on mobile*/
-    .toggle {
-        display: block;
+    .hero-text {
+        font-size: 25px;
     }
 
     /*Adjusting the about card to be wider on mobile devices makes the page more compact and nicer to view*/
