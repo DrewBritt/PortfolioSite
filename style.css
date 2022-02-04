@@ -10,7 +10,7 @@
 
 :root {
     --dark-blue: #1d2b38;
-    --soft-blue: #3b3e68;
+    --soft-blue: #383a5e;
     --mid-blue: #33398f;
     --light-blue: #60c8d6;
     --burnt-green: #70ae6e;
@@ -25,7 +25,7 @@
 html {
     font-family: 'Source Sans Pro', sans-serif;
     scroll-behavior: smooth;
-    background-color: var(--dark-blue);
+    background-image: linear-gradient(to bottom, rgb(34, 53, 70), var(--dark-blue));
     color: #fff;
 }
 
@@ -63,148 +63,23 @@ li a {
     text-shadow: 0px 2px black;
 }
 
-/*Navbar styling*/
-
-.navbar {
-    position: absolute;
-    width: 100%;
-    z-index: 2;
-    background-color: rgba(70,70,70,0.4);
-}
-
-.navbar-sections ul {
-    justify-content: space-between;
-    padding: 0 5%;
-    width: 50%;
-}
-
-.navbar-left {
-    float: left;
-    padding: 0 5%;
-    height: 10vh;
-}
-
-.navbar-left a {
-    display: block;
-}
-
-.navbar-right {
-    float: right;
-    height: 10vh;
-}
-
-.navbar-sections ul li a {
-    transition: all .5s ease;
-}
-
-.navbar-sections ul li a:hover{
-    font-size: 3rem;
-}
-
-@keyframes scaleNavbarTextUp {
-    from {
-        font-size: 1.5rem;
-    }
-
-    to {
-        font-size: 3rem;
-    }
-}
-
-@keyframes scaleNavbarTextDown {
-    from {
-        font-size: 3rem;
-    }
-
-    to {
-        font-size: 1.5rem;
-    }
-}
-
-/*Mobile navbar styling*/
-.mobile-navbar {
-    position: fixed;
-    width: 0px;
-    height: 100%;
-    background-color: rgba(70,70,70,0.95);
-    transition: 0.5s;
-    overflow: hidden;
-    z-index: 3;
-
-    /*Hide on desktop by default (set to display: block in mobile section)*/
-    display: none;
-}
-
-.mobile-navbar.active {
-    width: 40%;
-}
-
-.mobile-navbar ul {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: block;
-}
-
-.mobile-navbar ul li {
-    position: relative;
-    list-style: none;
-    width: 25vh;
-    
-}
-
-.mobile-navbar ul li:hover {
-    background-color: #33398f65;
-}
-
-.mobile-navbar ul li a {
-    position: relative;
-    display: block;
-    width: 100%;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-.toggle {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 60px;
-    height: 60px;
-    cursor: pointer; 
-    z-index: 2;
-
-    /*Hide on desktop by default (set to display: block in mobile section)*/
-    display: none;
-}
-
-.toggle img {
-    height: 100%;
-    width: 100%;
-}
-
 /*Hero styling*/
 
-.hero-container {
+.hero-section {
     position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
 }
 
-.hero-image-container {
-    position: relative;
-    background-image: url(images/me.JPG);
-    background-size: cover;
-    background-position: center;
+.hero-blur-overlay {
+    position: absolute;
     width: 100%;
     height: 100%;
-    margin-top: 0vh;
-    animation: blur 5s;
-    filter: blur(2px);
-    -webkit-filter: blur(2px);
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 1;
 }
 
 @keyframes blur {
@@ -221,28 +96,68 @@ li a {
     }
 }
 
-.hero-overlay {
+.hero-image-container {
     position: absolute;
+    background-image: url(images/me.JPG);
+    background-size: cover;
+    background-position: center;
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0,0,0,0.3);
-    z-index: 1;
+    margin-top: 0vh;
+    animation: blur 5s;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+.hero-text-container {
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@keyframes hero-header-fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes hero-text-fade {
+    from {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.hero-header-text {
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0px 1px black;
+    z-index: 2;
+    animation: hero-header-fade 3s;
 }
 
 .hero-text {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: left;
-    top: 40%;
-    left: 5%;
+    text-align: center;
     font-size: 25px;
     color: #fff;
     text-transform: uppercase;
     z-index: 2;
+    animation: hero-text-fade 3s;
 }
 
 .skill-text {
@@ -271,7 +186,7 @@ li a {
     background: white;
     margin: 50px;
     box-shadow: -15px 7px 30px rgba(0,0,0,0.2);
-    border-radius: 10px;
+    border-radius: 8px;
     background-size: cover;
     background-position: left center;
 }
@@ -309,6 +224,8 @@ li a {
     overflow: hidden;
     transition: .5s;
     animation: container-slide-down .5s;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 
 .text-container:hover {
@@ -428,25 +345,17 @@ li a {
 
 /*Mobile styling*/
 @media screen and (max-width: 768px) {
-    /*Hide desktop navbar on mobile screens*/
-    .navbar {
-        display: none;
+    /*Adjust hero text sizes to appear better on smaller screens*/
+    .hero-text-container {
+        height: 70%;
     }
 
-    /*Renders mobile navbar on mobile screens*/
-    .mobile-navbar {
-        display: block;
+    .hero-header-text {
+        font-size: 35px;
     }
 
-    /*Display hamburger icon on mobile*/
-    .toggle {
-        display: block;
-    }
-
-    /*Adjust location of hero text to look nicer against background*/
     .hero-text {
-        top: 15%;
-        left: 5%;
+        font-size: 25px;
     }
 
     /*Adjusting the about card to be wider on mobile devices makes the page more compact and nicer to view*/
