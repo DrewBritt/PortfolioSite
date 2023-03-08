@@ -273,28 +273,17 @@ li a {
     justify-content: center;
 }
 
-.contact-text {
-    text-align: center;
-    font-size: 20px;
-    padding: 10px;
-    font-weight: bold;
-}
-
-.icons-list {
-    padding-left: 45%;
-    padding-right: 45%;
-}
-
 /*Misc styling*/
 .social-icon {
-    width: 25%;
     text-align: center;
-    margin: auto;
 }
 
 .social-icon img {
-    height: 32px;
-    width: 32px;
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /*Used to lock scrolling of body when mobile navbar is active*/
