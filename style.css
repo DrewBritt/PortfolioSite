@@ -262,47 +262,6 @@ li a {
     text-shadow: 0px 1px black;
 }
 
-/*About styling*/
-.about-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2%;
-}
-
-.about-card {
-    width: 50%;
-    background-color: var(--soft-blue);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: row wrap;
-    border-radius: 2%;
-}
-
-.about-image {
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-}
-
-.about-image img {
-    width: 50%;
-    height: 50%;
-    border-radius: 5%;
-}
-
-.about-text {
-    padding: 25px 0;
-    width: 90%;
-    text-align: center;
-}
-
-.about-text p {
-    font-size: 25px;
-    text-shadow: 0px 1px black;
-}
-
 /*Contact styling*/
 .contact-container {
     width: 100%;
@@ -358,27 +317,6 @@ li a {
         font-size: 25px;
     }
 
-    /*Adjusting the about card to be wider on mobile devices makes the page more compact and nicer to view*/
-    .about-card {
-        width: 80%;
-    }
-
-    /*Adjusting the margin of the about text makes it scale better on smaller devices*/
-    .about-text {
-        margin-left: 5%;
-        margin-right: 5%;
-        text-align: center;
-    }
-
-    .about-text p {
-        font-size: 20px;
-    }
-
-    /*Scale up image to appear larger on mobile, and remove image margin used on larger screens.*/
-    .about-image img {
-        height: 90%;
-        width: 90%;
-        margin-left: 0;
     }
 
     /*Same as above but with icons*/
