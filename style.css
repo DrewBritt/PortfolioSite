@@ -166,10 +166,15 @@ li a {
 }
 
 /*Projects styling*/
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .project-container {
     height: auto;
-    width: 100%;
+    width: 80%;
 }
 
 .projects {
@@ -182,28 +187,15 @@ li a {
 .project-item {
     position: relative;
     height: 400px;
-    width: 400px;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: white;
-    margin: 50px;
+    background-color: var(--soft-blue);
+    margin: 25px;
     box-shadow: -15px 7px 30px rgba(0,0,0,0.2);
     border-radius: 8px;
-    background-size: cover;
-    background-position: left center;
-}
-
-#synapse {
-    background-image: url(images/synapsedemo.PNG);
-    background-position: center; 
-}
-
-#flexcave {
-    background-image: url(images/flexcavedemo.PNG);
-    background-position: center top;
-}
-
-#buttingheads {
-    background-image: url(images/buttingheadsdemo.PNG);
-    background-position: left center;
 }
 
 .project-name {
@@ -213,53 +205,51 @@ li a {
     text-shadow: 0px 1px black;
 }
 
-.text-container {
-    position: absolute;
-    height: 60px;
-    width: 100%;
-    z-index: 2;
-    left: 0;
-    bottom: 0;
-    background-color: var(--soft-blue);
-    overflow: hidden;
-    transition: .5s;
-    animation: container-slide-down .5s;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-}
-
-.text-container:hover {
-    height: 55%;
-    animation: container-slide-up .5s;
-}
-
-@keyframes container-slide-up {
-    from {
-        height: 60px;
-    }
-    
-    to {
-        height: 55%;
-    }
-}
-
-@keyframes container-slide-down {
-    from {
-        height: 55%;
-    }
-    
-    to {
-        height: 60px;
-    }
-}
-
-.project-content {
-    padding: 10px 0;
-}
-
-.project-content p {
+.project-subheader {
     text-align: center;
+    font-size: 15px;
     text-shadow: 0px 1px black;
+    width: 75%;
+}
+
+.project-image {
+    width: 90%;
+    height: 70%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    outline: 1px solid var(--dark-grey);
+}
+
+.project-icons {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#crazyeights {
+    background-image: url(images/crazyeightsdemo.jpg);
+    background-position: center; 
+}
+
+#sketch {
+    background-image: url(images/sketchdemo.jpg);
+    background-position: center;
+}
+
+#synapse {
+    background-image: url(images/synapsedemo.PNG);
+    background-position: center; 
+}
+
+#flexcave {
+    background-image: url(images/flexcavedemo.PNG);
+    background-position: center
 }
 
 /*Contact styling*/
