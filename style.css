@@ -185,20 +185,20 @@ li a {
 
 .project-container {
     height: auto;
-    width: 80%;
+    width: 100%;
 }
 
 .projects {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: wrap;
+    flex-wrap: wrap;
 }
 
 .project-item {
     position: relative;
-    height: 400px;
-    width: 550px;
+    height: 450px;
+    width: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -232,7 +232,6 @@ li a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    outline: 1px solid var(--dark-grey);
 }
 
 .project-icons {
