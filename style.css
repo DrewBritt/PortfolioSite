@@ -144,7 +144,7 @@ li a {
 .hero-icon {
     width: 200px;
     height: 200px;
-    background-image: url("images/me_icon.PNG");
+    background-image: url("images/me_icon.png");
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
