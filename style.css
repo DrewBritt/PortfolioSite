@@ -9,7 +9,7 @@
 }
 
 :root {
-    --dark-blue: #1d2b38;
+    --dark-blue: #030f1d;
     --soft-blue: #383a5e;
     --mid-blue: #33398f;
     --light-blue: #60c8d6;
@@ -25,7 +25,7 @@
 html {
     font-family: 'Source Sans Pro', sans-serif;
     scroll-behavior: smooth;
-    background-image: linear-gradient(to bottom, rgb(34, 53, 70), var(--dark-blue));
+    background-image: linear-gradient(to bottom, rgb(28, 33, 70), var(--dark-blue));
     color: #fff;
 }
 
@@ -84,36 +84,36 @@ li a {
 
 @keyframes blur {
     0% {
-        filter: blur(10px);
-        -webkit-filter: blur(10px);
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
         transform: scale(1.1);
     }
 
     100% {
-        filter: blur(2px);
-        -webkit-filter: blur(2px);
+        filter: blur(15px);
+        -webkit-filter: blur(15px);
         transform: scale(1);
     }
 }
 
 .hero-image-container {
     position: absolute;
-    background-image: url(images/me.JPG);
+    background-image: url(images/heroimage.jpg);
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 100%;
     margin-top: 0vh;
     animation: blur 5s;
-    filter: blur(2px);
-    -webkit-filter: blur(2px);
+    filter: blur(15px);
+    -webkit-filter: blur(15px);
 }
 
-.hero-text-container {
-    height: 55%;
+.hero-content-container {
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
@@ -141,6 +141,17 @@ li a {
     }
 }
 
+.hero-icon {
+    width: 200px;
+    height: 200px;
+    background-image: url("images/me_icon.PNG");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    z-index: 2;
+    animation: hero-header-fade 3s;
+}
+
 .hero-header-text {
     text-align: center;
     font-size: 50px;
@@ -153,16 +164,16 @@ li a {
 
 .hero-text {
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     color: #fff;
     text-transform: uppercase;
     z-index: 2;
     animation: hero-text-fade 3s;
+    text-shadow: 0px 1px black;
 }
 
 .skill-text {
     color: var(--mid-blue);
-    text-shadow: 0px 1px black;
 }
 
 /*Projects styling*/
@@ -225,7 +236,7 @@ li a {
 }
 
 .project-icons {
-    width: 30%;
+    width: 45%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -293,9 +304,7 @@ li a {
     }
 
     .hero-text {
-        font-size: 25px;
-    }
-
+        font-size: 15px;
     }
 
     /*Same as above but with icons*/
